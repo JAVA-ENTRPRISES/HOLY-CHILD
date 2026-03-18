@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Modern School Header</title>
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+
+.nav-item{
+position:relative;
+}
+
+.nav-item::after{
+content:"";
+position:absolute;
+width:0%;
+height:3px;
+background:#facc15;
+left:0;
+bottom:-6px;
+transition:0.3s;
+}
+
+.nav-item:hover::after{
+width:100%;
+}
+
+</style>
+
+</head>
+
+<body class="bg-gray-100">
+
+<!-- TOP CONTACT BAR -->
+<div class="bg-[#0F172A] text-white text-sm">
+<div class="max-w-7xl mx-auto flex justify-between px-6 py-2">
+
+<div>
+<span>📞 +91 9876543210</span>
+</div>
+
+<div>
+<span>✉ school@email.com</span>
+</div>
+
+</div>
+</div>
+
+
+<!-- HEADER -->
+<header class="bg-white shadow-lg sticky top-0 z-50">
+
+<div class="max-w-8xl mx-auto px-6 py-4 flex items-center justify-between">
+
+<!-- LOGO + SCHOOL NAME -->
+<div class="flex items-center gap-4">
+
+<img src="images/holy.jpg" class="h-14">
+
+<div>
+<h1 class="text-xl font-bold text-[#1E3A8A]">
+HOLY CHILD SCHOOL
+</h1>
+</div>
+
+</div>
+
+
+<!-- NAVIGATION -->
+<nav class="hidden md:flex gap-6 font-semibold text-gray-700">
+
+<a href="index.html" class="nav-item hover:text-green-700">HOME</a>
+<a href="about.html" class="nav-item hover:text-green-700">ABOUT</a>
+<a href="admission.html" class="nav-item hover:text-green-700">ADMISSION</a>
+<a href="academic.html" class="nav-item hover:text-green-700">ACADEMICS</a>
+<a href="facility.html" class="nav-item hover:text-green-700">FACILITIES</a>
+<a href="mandatory-disclosure.html" class="nav-item hover:text-green-700">MANDATORY DISCLOSURE</a>
+<a href="gallery.html" class="nav-item hover:text-green-700">GALLERY</a>
+<a href="contact.html" class="nav-item hover:text-green-700">CONTACT</a>
+
+</nav>
+
+
+<!-- APPLY BUTTON -->
+<div class="hidden md:block">
+
+<a href="#"
+class="bg-yellow-400 px-5 py-2 rounded-full font-semibold hover:bg-yellow-500 transition">
+
+Apply Now
+
+</a>
+
+</div>
+
+
+<!-- MOBILE BUTTON -->
+<button onclick="openMenu()" class="md:hidden text-3xl">
+☰
+</button>
+
+</div>
+
+
+<!-- MOBILE MENU -->
+<div
+        id="mobileMenu"
+        class="fixed top-0 right-0 h-100 w-64 bg-gray-200 p-6 transform translate-x-full transition duration-300 z-50"
+      >
+        <div
+          class="text-right text-3xl cursor-pointer mb-6"
+          onclick="closeMenu()"
+        >
+          ×
+        </div>
+        <nav class="flex flex-col gap-6 text-lg font-medium">
+          <a href="index.html" onclick="closeMenu()">Home</a>
+          <a href="about.html" onclick="closeMenu()">About</a>
+          <a href="admission.html" onclick="closeMenu()">Admission</a>
+          <a href="academic.html" onclick="closeMenu()">Academic</a>
+          <a href="facility.html" onclick="closeMenu()">Facility</a>
+          <a href="mandatory-disclosure.html" onclick="closeMenu()"
+            >Mandatory Disclosure</a
+          >
+          <a href="gallery.html" onclick="closeMenu()">Gallery</a>
+          <a href="contact.html" onclick="closeMenu()">Contact</a>
+        </nav>
+      </div>
+<div
+        id="overlay"
+        class="fixed inset-0 bg-black/40 hidden"
+        onclick="closeMenu()"
+      ></div>
+
+</header>
+
+</body>
+</html>
