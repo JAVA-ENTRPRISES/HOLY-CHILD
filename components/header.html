@@ -10,11 +10,11 @@
 
 <style>
 
-.nav-item{
+.nav-link{
 position:relative;
 }
 
-.nav-item::after{
+.nav-link::after{
 content:"";
 position:absolute;
 width:0%;
@@ -25,9 +25,18 @@ bottom:-6px;
 transition:0.3s;
 }
 
-.nav-item:hover::after{
+.nav-link:hover::after{
 width:100%;
 }
+        /* ACTIVE MENU */
+      .nav-link.active {
+        color: #1f8a4c;
+        font-weight: 700;
+      }
+
+      .nav-link.active::after {
+        width: 100%;
+      }
 
 </style>
 
